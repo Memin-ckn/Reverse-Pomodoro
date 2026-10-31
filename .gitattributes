@@ -1,0 +1,4 @@
+# Keep line endings correct so launchers work on every system.
+*.bat text eol=crlf
+*.sh text eol=lf
+*.command text eol=lf

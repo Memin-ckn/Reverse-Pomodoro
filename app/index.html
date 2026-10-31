@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reverse Pomodoro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-phase="idle"><!-- app.js updates data-phase: idle | studying | resting -->
+  <main>
+    <h1>Reverse Pomodoro</h1>
+    <p id="phase" class="phase">Ready</p>
+    <div id="time" class="time" aria-live="off">0:00</div>
+    <p id="hint" class="hint">Study as long as you like. You'll earn ¼ of it as rest.</p>
+
+    <div class="buttons">
+      <button id="primary" class="primary">Start studying</button>
+      <button id="pause" class="secondary" hidden>Pause</button>
+    </div>
+
+    <label class="cap">
+      Max rest (minutes, 0 = no cap)
+      <input id="cap" type="number" min="0" step="1" value="0">
+    </label>
+
+    <section class="history">
+      <h2>Today</h2>
+      <p id="totals" class="totals"></p>
+      <ul id="list"></ul>
+      <button id="clear" class="link">Clear history</button>
+    </section>
+  </main>
+  <script src="logic.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
